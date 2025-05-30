@@ -21,6 +21,7 @@ function Home() {
   const handleLoginSuccess = (token) => {
     localStorage.setItem("auth_token", token)
     setIsAuthenticated(true)
+    console.log(isAuthenticated);
     navigate("/dashboard")
   }
 

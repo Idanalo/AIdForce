@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { User, Mail, Lock } from "lucide-react"
 import "./Login.styls.css"
-import { useUser } from "../../UserContext.jsx";
+// import { useUser } from "../../UserContext.jsx";
 
 // Custom Button Component
 const CustomButton = ({ children, onClick, className = "", ...props }) => {

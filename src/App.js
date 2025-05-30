@@ -3,11 +3,11 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserProvider } from "./UserContext";
 
-const Root = () => (
-  <UserProvider>
-    <App />
-  </UserProvider>
-);
+// const Root = () => (
+//   <UserProvider>
+//     <App />
+//   </UserProvider>
+// );
 
 const Home = lazy(() => import("./routs/home/Home"));
 const Files = lazy(() => import("./routs/files/Files"));
