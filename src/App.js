@@ -1,7 +1,7 @@
 // App.jsx
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserProvider } from "./UserContext";
+// import { UserProvider } from "./UserContext";
 
 // const Root = () => (
 //   <UserProvider>
