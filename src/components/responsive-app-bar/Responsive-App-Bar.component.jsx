@@ -8,7 +8,7 @@ import FileManager from "../files/Files.compounent"
 import "./Responsive-App-Bar.styls.scss"
 import ChatBot from "../chat-bot/Chat-Bot.component"
 
-const drawerWidth = 240
+// const drawerWidth = 240
 
 const NAV_ITEMS = [
   { label: "פרטי משתמש", icon: <Settings className="nav-icon" />, component: "register" },

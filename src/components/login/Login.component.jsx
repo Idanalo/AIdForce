@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { User, Mail, Lock } from "lucide-react"
 import "./Login.styls.css"
+import { useUser } from "../../UserContext.jsx";
 
 // Custom Button Component
 const CustomButton = ({ children, onClick, className = "", ...props }) => {
@@ -74,28 +75,28 @@ function LoginForm({ onLoginSuccess = () => {} }) {
   const handleLogin = async () => {
     onLoginSuccess("mock_token_" + Date.now())
     return;
-    try {
-      const response = await fetch("http://localhost:5000/api/register-or-login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      })
+    // try {
+    //   const response = await fetch("http://localhost:5000/api/register-or-login", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ email, password }),
+    //   })
 
-      const data = await response.json()
+    //   const data = await response.json()
 
-      if (response.ok) {
-        // alert(data.message) // הצלחה או התחברות
-        // Call the onLoginSuccess callback with a mock token
-        onLoginSuccess("mock_token_" + Date.now())
-      } else {
-        alert(data.error || "אירעה שגיאה")
-      }
-    } catch (error) {
-      console.error("שגיאה ב־fetch:", error)
-      alert("שגיאה בחיבור לשרת")
-    }
+    //   if (response.ok) {
+    //     // alert(data.message) // הצלחה או התחברות
+    //     // Call the onLoginSuccess callback with a mock token
+    //     onLoginSuccess("mock_token_" + Date.now())
+    //   } else {
+    //     alert(data.error || "אירעה שגיאה")
+    //   }
+    // } catch (error) {
+    //   console.error("שגיאה ב־fetch:", error)
+    //   alert("שגיאה בחיבור לשרת")
+    // }
   }
 
   return (
