@@ -20,7 +20,6 @@
     "firebase": "^11.8.1",
     "ionicons": "^8.0.8",
     "lucide-react": "^0.511.0",
-    "next": "^15.3.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-filepond": "^7.1.3",
